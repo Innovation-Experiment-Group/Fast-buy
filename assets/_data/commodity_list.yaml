@@ -1,0 +1,30 @@
+commodities:
+  - id: "C001"
+    name: "高级办公椅"
+    description: "人体工学设计，舒适耐用"
+    price: 1299.99
+    imageUrl: "assets/images/office_chair.jpg"
+    attributes:
+      material: "真皮"
+      color: "黑色"
+      weight: "15kg"
+      dimensions: "65x65x110cm"
+    stock: 100
+    category: "办公家具"
+    createdAt: "2024-03-20T10:00:00Z"
+    updatedAt: "2024-03-20T10:00:00Z"
+
+  - id: "C002"
+    name: "智能手表"
+    description: "多功能运动健康监测"
+    price: 899.99
+    imageUrl: "assets/images/smart_watch.jpg"
+    attributes:
+      battery: "7天续航"
+      waterResistant: "50米防水"
+      screen: "1.4英寸AMOLED"
+      features: ["心率监测", "GPS", "睡眠追踪"]
+    stock: 50
+    category: "电子产品"
+    createdAt: "2024-03-20T10:00:00Z"
+    updatedAt: "2024-03-20T10:00:00Z" 

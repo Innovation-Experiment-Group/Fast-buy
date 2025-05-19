@@ -1,0 +1,21 @@
+clients:
+  - code: "CL001"
+    name: "张三"
+    contact: "13800138000"
+    country: "中国"
+    language: "zh-CN"
+    timezone: 8
+
+  - code: "CL002"
+    name: "John Smith"
+    contact: "+1-555-0123"
+    country: "美国"
+    language: "en-US"
+    timezone: -5
+
+  - code: "CL003"
+    name: "田中太郎"
+    contact: "+81-90-1234-5678"
+    country: "日本"
+    language: "ja-JP"
+    timezone: 9 
