@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<h1>运单列表</h1>
+<form action="#" method="get">
+  <select name="status" onchange="this.form.submit()">
+    <option value="">全部</option>
+    <option value="未发货" {% if page.status == "未发货" %}selected{% endif %}>未发货</option>
+    <option value="已发货" {% if page.status == "已发货" %}selected{% endif %}>已发货</option>
+    <option value="已到达" {% if page.status == "已到达" %}selected{% endif %}>已到达</option>
+    <option value="已提货" {% if page.status == "已提货" %}selected{% endif %}>已提货</option>
+  </select>
+</form>
+{% assign shipments = site.data.shipments %}
+{% if page.status %}
+  {% assign shipments = shipments | where: "shipment_status", page.status %}
+{% endif %}
+<ul>
+  {% for shipment in shipments %}
+    {% assign client = site.data.clients | where: "client_code", shipment.client_code | first %}
+    <li>
+      <h2>{{ shipment.shipment_number }}</h2>
+      <p>客户姓名: {{ client.client_name }}</p>
+      <p>状态: {{ shipment.shipment_status }}</p>
+      <p>货物简称: {{ shipment.goods_abbreviation }}</p>
+      <p>运单建立时间: {{ shipment.creation_time | date: "%Y年%m月%d日 %H:%M:%S" }}</p>
+      <p>运单发出日期: {{ shipment.departure_date | date: "%Y年%m月%d日" }}</p>
+      <p>运单到达时间: {{ shipment.arrival_time | date: "%Y年%m月%d日" }}</p>
+      <p>运单提货时间: {{ shipment.pickup_time | date: "%Y年%m月%d日" }}</p>
+    </li>
+  {% endfor %}
+</ul>

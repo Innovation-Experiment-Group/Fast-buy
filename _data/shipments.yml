@@ -1,0 +1,13 @@
+- departure_port_timezone: +8
+  shipment_number: NTS-2304_Elec_10_20250506123000
+  client_code: NTS-2304
+  shipping_method: Sea
+  estimated_shipping_time: 30
+  shipment_status: 未发货
+  creation_time: 2025-05-06 12:30:00
+  departure_date: 2025-05-07
+  arrival_time: 2025-06-06
+  pickup_time: 2025-06-07
+  goods_abbreviation: Elec
+  goods_details: 电子元件，型号ABC123
+  package_quantity: 10
